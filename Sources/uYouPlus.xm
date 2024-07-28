@@ -257,7 +257,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Hide "Play next in queue" - qnblackcat/uYouPlus#1138
 %hook YTMenuItemVisibilityHandler
 - (BOOL)shouldShowServiceItemRenderer:(YTIMenuConditionalServiceItemRenderer *)renderer {
-    return IS_ENABLED(@"hidePlayNextInQueue_enabled") && renderer.icon.iconType == 251 ? NO : %orig;
+    return IS_ENABLED(@"hidePlayNextInQueue_enabled") && renderer.icon.iconType == 251 && renderer.secondaryIcon.iconType == 741 ? NO : %orig;
 }
 %end
 
