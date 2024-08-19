@@ -22,7 +22,7 @@ NSBundle *tweakBundle = uYouPlusBundle();
 // Bring back Slide to seek - https://github.com/PoomSmart/YTABConfig/discussions/95#discussioncomment-8166019
 %hook YTColdConfig
 - (BOOL)speedMasterArm2FastForwardWithoutSeekBySliding {
-    return IS_ENABLED(@"slideToSeek_enabled") ? NO : %orig;
+    return IS_ENABLED(kSlideToSeek) ? NO : %orig;
 }
 %end
 
@@ -30,7 +30,7 @@ NSBundle *tweakBundle = uYouPlusBundle();
 %hook YTSegmentableInlinePlayerBarView
 - (void)didMoveToWindow {
     %orig;
-    if (IS_ENABLED(@"snapToChapter_enabled")) {
+    if (IS_ENABLED(kSnapToChapter)) {
         self.enableSnapToChapter = NO;
     }
 }
@@ -39,9 +39,12 @@ NSBundle *tweakBundle = uYouPlusBundle();
 // Disable pinch to zoom
 %hook YTColdConfig
 - (BOOL)videoZoomFreeZoomEnabledGlobalConfig {
-    return IS_ENABLED(@"pinchToZoom_enabled") ? NO : %orig;
+    return IS_ENABLED(kPinchToZoom) ? NO : %orig;
 }
 %end
+
+// Enable miniplayer for all videos
+// See YTMiniPlayerEnabler.x
 
 // Hide useless buttons under the video player by @PoomSmart
 static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *identifiers) {
@@ -78,15 +81,15 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
     if ([self.accessibilityIdentifier isEqualToString:@"id.video.scrollable_action_bar"]) {
         ASCellNode *node = [element node];
         ASNodeController *nodeController = [node controller];
-        if (IS_ENABLED(@"hideRemixButton_enabled") && findCell(nodeController, @[@"id.video.remix.button"])) {
+        if (IS_ENABLED(kHideRemixButton) && findCell(nodeController, @[@"id.video.remix.button"])) {
             return CGSizeZero;
         }
         
-        if (IS_ENABLED(@"hideClipButton_enabled") && findCell(nodeController, @[@"clip_button.eml"])) {
+        if (IS_ENABLED(kHideClipButton) && findCell(nodeController, @[@"clip_button.eml"])) {
             return CGSizeZero;
         }
         
-        if (IS_ENABLED(@"hideDownloadButton_enabled") && findCell(nodeController, @[@"id.ui.add_to.offline.button"])) {
+        if (IS_ENABLED(kHideDownloadButton) && findCell(nodeController, @[@"id.ui.add_to.offline.button"])) {
             return CGSizeZero;
         }
     }
@@ -95,14 +98,11 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 
 %end
 
-// Enable miniplayer for all videos
-// See YTMiniPlayerEnabler.x
-
 // Use stock iOS volume HUD
 // Use YTColdConfig's method instead of YTStockVolumeHUD.xm, see https://x.com/PoomSmart/status/1756904290445332653
 %hook YTColdConfig
 - (BOOL)iosUseSystemVolumeControlInFullscreen {
-    return IS_ENABLED(@"stockVolumeHUD_enabled") ? YES : %orig;
+    return IS_ENABLED(kStockVolumeHUD) ? YES : %orig;
 }
 %end
 
@@ -111,19 +111,19 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 %hook YTMainAppControlsOverlayView
 // Hide autoplay switch
 - (void)setAutoplaySwitchButtonRenderer:(id)arg1 { // hide Autoplay
-    if (IS_ENABLED(@"hideAutoplaySwitch_enabled")) {}
+    if (IS_ENABLED(kHideAutoplaySwitch)) {}
     else { return %orig; }
 }
 // Hide CC button
 - (void)setClosedCaptionsOrSubtitlesButtonAvailable:(BOOL)arg1 {
-    return IS_ENABLED(@"hideCC_enabled") ? %orig(NO) : %orig;
+    return IS_ENABLED(kHideCC) ? %orig(NO) : %orig;
 }
 %end
 
 // Hide HUD Messages
 %hook YTHUDMessageView
 - (id)initWithMessage:(id)arg1 dismissHandler:(id)arg2 {
-    return IS_ENABLED(@"hideHUD_enabled") ? nil : %orig;
+    return IS_ENABLED(kHideHUD) ? nil : %orig;
 }
 %end
 
@@ -133,27 +133,27 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Hide channel watermark
 %hook YTAnnotationsViewController
 - (void)loadFeaturedChannelWatermark {
-    if (IS_ENABLED(@"hideChannelWatermark_enabled")) {}
+    if (IS_ENABLED(kHideChannelWatermark)) {}
     else { return %orig; }
 }
 %end
 %hook YTColdConfig
 - (BOOL)iosEnableFeaturedChannelWatermarkOverlayFix {
-    return IS_ENABLED(@"hideChannelWatermark_enabled") ? NO : %orig;
+    return IS_ENABLED(kHideChannelWatermark) ? NO : %orig;
 }
 %end
 
 // Bring back the red progress bar - old versions
 %hook YTInlinePlayerBarContainerView
 - (id)quietProgressBarColor {
-    return IS_ENABLED(@"redProgressBar_enabled") ? [UIColor redColor] : %orig;
+    return IS_ENABLED(kRedProgressBar) ? [UIColor redColor] : %orig;
 }
 %end
 
 // Bring back the red progress bar - new versions
 %hook YTPlayerBarRectangleDecorationView
 - (void)drawRectangleDecorationWithSideMasks:(CGRect)rect {
-    if (IS_ENABLED(@"redProgressBar_enabled")) {
+    if (IS_ENABLED(kRedProgressBar)) {
         YTIPlayerBarDecorationModel *model = [self valueForKey:@"_model"];
         int overlayMode = model.playingState.overlayMode;
         model.playingState.overlayMode = 1;
@@ -170,7 +170,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Hide engagement panels in full screen
 %hook YTColdConfig
 - (BOOL)isLandscapeEngagementPanelEnabled {
-    return IS_ENABLED(@"hideRightPanel_enabled") ? NO : %orig;
+    return IS_ENABLED(kHideRightPanel) ? NO : %orig;
 }
 %end
 
@@ -185,7 +185,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 %hook _ASDisplayView
 - (void)didMoveToWindow {
     %orig;
-    if ((IS_ENABLED(@"hideBuySuperThanks_enabled")) && ([self.accessibilityIdentifier isEqualToString:@"id.elements.components.suggested_action"])) { 
+    if ((IS_ENABLED(kHideBuySuperThanks)) && ([self.accessibilityIdentifier isEqualToString:@"id.elements.components.suggested_action"])) { 
         self.hidden = YES; 
     }
 }
@@ -194,7 +194,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Hide subscriptions button
 %hook YTReelWatchRootViewController
 - (void)setPausedStateCarouselView {
-    if (IS_ENABLED(@"hideSubcriptions_enabled")) {}
+    if (IS_ENABLED(kHideSubscriptions)) {}
     else { return %orig; }
 }
 %end
@@ -205,7 +205,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 %hook YTRightNavigationButtons
 - (void)didMoveToWindow {
     %orig;
-    if (IS_ENABLED(@"hideiSponsorBlockButton_enabled")) {
+    if (IS_ENABLED(kHideiSponsorBlockButton)) {
         self.sponsorBlockButton.hidden = YES;
         self.sponsorBlockButton.frame = CGRectZero;
     }
@@ -235,7 +235,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Enable YouTube startup animation
 %hook YTColdConfig
 - (BOOL)mainAppCoreClientIosEnableStartupAnimation {
-    return IS_ENABLED(@"ytStartupAnimation_enabled") ? YES : NO;
+    return IS_ENABLED(kYTStartupAnimation) ? YES : NO;
 }
 %end
 
@@ -257,7 +257,7 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 // Hide "Play next in queue" - qnblackcat/uYouPlus#1138
 %hook YTMenuItemVisibilityHandler
 - (BOOL)shouldShowServiceItemRenderer:(YTIMenuConditionalServiceItemRenderer *)renderer {
-    return IS_ENABLED(@"hidePlayNextInQueue_enabled") && renderer.icon.iconType == 251 && renderer.secondaryIcon.iconType == 741 ? NO : %orig;
+    return IS_ENABLED(kHidePlayNextInQueue) && renderer.icon.iconType == 251 && renderer.secondaryIcon.iconType == 741 ? NO : %orig;
 }
 %end
 
@@ -292,14 +292,14 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
 - (BOOL)application:(UIApplication *)application
     didFinishLaunchingWithOptions:(NSDictionary<UIApplicationLaunchOptionsKey, id> *)launchOptions {
     BOOL didFinishLaunching = %orig;
-    if (IS_ENABLED(@"flex_enabled")) {
+    if (IS_ENABLED(kFlex)) {
         [[%c(FLEXManager) performSelector:@selector(sharedManager)] performSelector:@selector(showExplorer)];
     }
     return didFinishLaunching;
 }
 - (void)appWillResignActive:(id)arg1 {
     %orig;
-    if (IS_ENABLED(@"flex_enabled")) {
+    if (IS_ENABLED(kFlex)) {
         [[%c(FLEXManager) performSelector:@selector(sharedManager)] performSelector:@selector(showExplorer)];
     }
 }
@@ -391,20 +391,20 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
     // dlopen([[NSString stringWithFormat:@"%@/Frameworks/uYou.dylib", [[NSBundle mainBundle] bundlePath]] UTF8String], RTLD_LAZY);
 
     %init;
-    if (IS_ENABLED(@"disableHints_enabled")) {
+    if (IS_ENABLED(kDisableHints)) {
         %init(gDisableHints);
     }
-    if (IS_ENABLED(@"hideChipBar_enabled")) {
+    if (IS_ENABLED(kHideChipBar)) {
         %init(gHideChipBar);
     }
-    if (IS_ENABLED(@"iPhoneLayout_enabled") && (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
+    if (IS_ENABLED(kiPhoneLayout) && (UIDevice.currentDevice.userInterfaceIdiom == UIUserInterfaceIdiomPad)) {
         %init(giPhoneLayout);
     }
     
     // Change the default value of some options
     NSArray *allKeys = [[[NSUserDefaults standardUserDefaults] dictionaryRepresentation] allKeys];
-    if (![allKeys containsObject:@"hidePlayNextInQueue_enabled"]) {
-        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"hidePlayNextInQueue_enabled"];
+    if (![allKeys containsObject:kHidePlayNextInQueue]) {
+        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kHidePlayNextInQueue];
     }
     if (![allKeys containsObject:@"relatedVideosAtTheEndOfYTVideos"]) { 
        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"relatedVideosAtTheEndOfYTVideos"]; 
@@ -417,5 +417,8 @@ static BOOL findCell(ASNodeController *nodeController, NSArray <NSString *> *ide
     }
     if (![allKeys containsObject:@"YouPiPEnabled"]) { 
        [[NSUserDefaults standardUserDefaults] setBool:YES forKey:@"YouPiPEnabled"]; 
+    }
+    if (![allKeys containsObject:kGoogleSigninFix]) { 
+       [[NSUserDefaults standardUserDefaults] setBool:YES forKey:kGoogleSigninFix];
     }
 }
