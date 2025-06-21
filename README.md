@@ -1,4 +1,12 @@
-# uYouPlus
+# ✈️ uYouPlus is now archived ✈️
+
+
+👉 Well, it’s time to say goodbye. Thank you all for trusting and using uYouPlus over the past years. Honestly, I NEVER expected uYouPlus to gain this much attention when I first uploaded it to GitHub 🤯 I’d also like to thank all the developers who contributed to this repo (see Credit), especially MiRO92, PoomSmart, and level3tjg. They’ve put in an incredible amount of time and effort to keep uYouPlus going until today. They’re the real heroes here 🦸‍♂️
+
+🚀 If you’re looking for an alternative to uYouPlus, I recommend checking out [YTLite 🔍](https://github.com/dayanch96/YTLite). It offers more features and is maintained and updated much more actively than uYouPlus ever was.
+
+👋 Goodbye, and I wish you all the very best! ❤️
+
 
 ![Image 2](https://github.com/qnblackcat/uYouPlus/assets/77606385/c1a1c58a-5d4d-48a6-bb98-d00086719ccc)
 <!--![Image](https://github.com/therealFoxster/uYouPlus/assets/77606385/eb34d3e3-a679-45d0-b2e5-01fdd459ce63)-->
@@ -42,39 +50,36 @@
 
 - The latest version of **uYouPlus** can be found under [Releases](https://github.com/qnblackcat/uYouPlus/releases/latest).
 - **Compatibility:** Requires iOS/iPadOS 14.0 or later.
-- For AltStore user: 
-
-  - My official AltStore repo: https://qnblackcat.github.io/AltStore/
-
-  - [Open in AltStore (v19.08.2-3.0.3)](http://tinyurl.com/4vzwk5hx) - It will take a while to install because AltStore needs to download the IPA first.
 
 <details>
-  <summary>Version information (last updated: Jun 27, 2024)</summary>
+  <summary>Version information (last updated: Apr 13, 2025)</summary>
 
 | **Tweaks/App** | **Developer** | **Version** | **Open source** |
 | - | - | :-: | :-:  |
-| **YouTube** | Google Inc | 19.25.4 | ✖︎ |
-| [uYou](https://github.com/MiRO92/uYou-for-YouTube) | [MiRO92](https://twitter.com/miro92) | 3.0.3 | ✖︎ |
-| **Open in YouTube** | [CokePokes](https://github.com/CokePokes) | 1.2 | [✔︎](https://github.com/CokePokes/YoutubeExtensions) |
-| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.2.7 | [✔︎](https://github.com/Galactic-Dev/iSponsorBlock) |
+| **YouTube** | Google Inc | 20.13.5 | ✖︎ |
+| [uYou](https://github.com/MiRO92/uYou-for-YouTube) | [MiRO92](https://twitter.com/miro92) | 3.0.4 | ✖︎ |
+| **OpenYoutubeAndShorts** | [CrossiDev-Studio](https://github.com/CrossiDev-Studio) | 1.0 | [✔︎](https://github.com/CrossiDev-Studio/OpenYoutubeAndShorts) |
+| **iSponsorBlock** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.2.12 | [✔︎](https://github.com/Galactic-Dev/iSponsorBlock) |
 | **BigYTMiniPlayer** | [Galactic-Dev](https://github.com/Galactic-Dev) | 1.0-1 | [✔︎](https://github.com/Galactic-Dev/BigYTMiniPlayer) |
 | **YTNoHoverCards** | [level3tjg](https://twitter.com/level3tjg) | 0.0.3 | [✔︎](https://github.com/level3tjg/YTNoHoverCards) |
 | **YTMiniplayerEnabler** | [level3tjg](https://twitter.com/level3tjg) | 0.0.2 | [✔︎](https://github.com/level3tjg/YTMiniplayerEnabler) |
-| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.1.6 | [✔︎](https://github.com/therealFoxster/DontEatMyContent) |
-| **YTSpeed** | [Lyvendia](https://github.com/Lyvendia) | 1.0.1 | [✔︎](https://github.com/Lyvendia/YTSpeed) |
+| **DontEatMyContent** | [therealFoxster](https://github.com/therealFoxster) | 1.1.10 | [✔︎](https://github.com/therealFoxster/DontEatMyContent) |
 | **Alderis Color Picker** | [HASHBANG Productions](https://github.com/hbang) | 1.2.3 | [✔︎](https://github.com/hbang/Alderis) |
-| **YTUHD** | [PoomSmart](https://twitter.com/poomsmart) | 1.5.3 | [✔︎](https://github.com/PoomSmart/YTUHD) |
-| **YouPiP** | [PoomSmart](https://twitter.com/poomsmart) | 1.8.12 | [✔︎](https://github.com/PoomSmart/YouPiP) |
-| **YTABConfig** | [PoomSmart](https://twitter.com/poomsmart) | 1.7.2 | [✔︎](https://github.com/PoomSmart/YTABConfig) |
+| **YTUHD** | [PoomSmart](https://twitter.com/poomsmart) | 1.6.1 | [✔︎](https://github.com/PoomSmart/YTUHD) |
+| **YouPiP** | [PoomSmart](https://twitter.com/poomsmart) | 1.12.7 | [✔︎](https://github.com/PoomSmart/YouPiP) |
+| **YTABConfig** | [PoomSmart](https://twitter.com/poomsmart) | 1.7.8 | [✔︎](https://github.com/PoomSmart/YTABConfig) |
 | **YTReExplore** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.2 | [✔︎](https://github.com/PoomSmart/YTReExplore) |
 | **NoYTPremium** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.4 | [✔︎](https://github.com/PoomSmart/NoYTPremium) |
 | **YTNoPaidPromo** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [✔︎](https://github.com/PoomSmart/YTNoPaidPromo) |
 | **YouRememberCaption** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.0 | [✔︎](https://poomsmart.github.io/repo/depictions/youremembercaption.html) |
-| **Return YouTube Dislike** | [PoomSmart](https://twitter.com/poomsmart) | 1.11.14 | [✔︎](https://github.com/PoomSmart/Return-YouTube-Dislikes) |
-| **YouMute** | [PoomSmart](https://twitter.com/poomsmart) | 1.2.1-3 | [✔︎](https://github.com/PoomSmart/YouMute) |
-| **YouQuality** | [PoomSmart](https://twitter.com/poomsmart) | 1.2.1 | [✔︎](https://github.com/PoomSmart/YouQuality) |
-| **YouTube-X** | [PoomSmart](https://twitter.com/poomsmart) | 1.6.9 | [✔︎](https://github.com/PoomSmart/YouTube-X) |
-| **YTVideoOverlay** | [PoomSmart](https://twitter.com/poomsmart) | 1.2.0 | [✔︎](https://github.com/PoomSmart/YTVideoOverlay) |
+| **Return YouTube Dislike** | [PoomSmart](https://twitter.com/poomsmart) | 1.13.7 | [✔︎](https://github.com/PoomSmart/Return-YouTube-Dislikes) |
+| **YouMute** | [PoomSmart](https://twitter.com/poomsmart) | 1.3.1 | [✔︎](https://github.com/PoomSmart/YouMute) |
+| **YouQuality** | [PoomSmart](https://twitter.com/poomsmart) | 1.3.5 | [✔︎](https://github.com/PoomSmart/YouQuality) |
+| **YouTube-X** | [PoomSmart](https://twitter.com/poomsmart) | 1.7.12 | [✔︎](https://github.com/PoomSmart/YouTube-X) |
+| **YTVideoOverlay** | [PoomSmart](https://twitter.com/poomsmart) | 2.2.2 | [✔︎](https://github.com/PoomSmart/YTVideoOverlay) |
+| **YouGroupSettings** | [PoomSmart](https://twitter.com/poomsmart) | 1.0.4 | [✔︎](https://github.com/PoomSmart/YouGroupSettings) |
+| **YouSpeed** | [PoomSmart](https://twitter.com/poomsmart) | 1.3.0 | [✔︎](https://github.com/PoomSmart/YouSpeed) |
+| **YTClassicVideoQuality** | [PoomSmart](https://twitter.com/poomsmart) | 1.5.1 | [✔︎](https://github.com/PoomSmart/YTClassicVideoQuality) |
 
 </details>
 
@@ -103,19 +108,21 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
 
 8. **[NoYTPremium](https://poomsmart.github.io/repo/depictions/noytpremium)**: Remove YouTube Premium upsell alerts.
 
-9. **[YTSpeed](http://cydia.saurik.com/package/com.lyvendia.ytspeed/)**: Simple playback speed tweak for the YouTube app on jailbroken iOS/iPadOS devices.
+9. **[YTMiniplayerEnabler](https://level3tjg.me/repo/depictions/?p=com.level3tjg.ytminiplayerenabler)**: Enable Miniplayer for all YouTube videos.
 
-10. **[YTMiniplayerEnabler](https://level3tjg.me/repo/depictions/?p=com.level3tjg.ytminiplayerenabler)**: Enable Miniplayer for all YouTube videos.
+10. **[DontEatMyContent](https://github.com/therealFoxster/DontEatMyContent)**: Prevent the notch/Dynamic Island from munching on 2:1 video content in YouTube.
 
-11. **[DontEatMyContent](https://github.com/therealFoxster/DontEatMyContent)**: Prevent the notch/Dynamic Island from munching on 2:1 video content in YouTube.
+11. **[YTABConfig](https://poomsmart.github.io/repo/depictions/ytabconfig)**: Configure A/B settings in iOS YouTube app.
 
-12. **[YTABConfig](https://poomsmart.github.io/repo/depictions/ytabconfig)**: Configure A/B settings in iOS YouTube app.
+12. **[YouMute](https://poomsmart.github.io/repo/depictions/youmute)**: Mute/unmute videos in iOS YouTube directly.
 
-13. **[YouMute](https://poomsmart.github.io/repo/depictions/youmute)**: Mute/unmute videos in iOS YouTube directly.
+13. **[YouQuality](https://poomsmart.github.io/repo/depictions/youquality)**: View and change video quality in YouTube app from the video overlay.
 
-14. **[YouQuality](https://poomsmart.github.io/repo/depictions/youquality)**: View and change video quality in YouTube app from the video overlay.
+14. **[YouTube-X](https://poomsmart.github.io/repo/depictions/ytx)**: A lightweight YouTube improvement tweak.
 
-15. **[YouTube-X](https://poomsmart.github.io/repo/depictions/ytx)**: A lightweight YouTube improvement tweak.
+15. **[YouGroupSettings](https://chariz.com/get/yougroupsettings)**: Group settings in YouTube app.
+
+16. **[YouSpeed](https://poomsmart.github.io/repo/depictions/youspeed)**: Speed up or slow down YouTube videos from the video overlay. Also add more video speeds.
 
 </details>
 
@@ -123,6 +130,7 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
 
 - Special thanks to all the developers who have contributed to uYouPlus! 
 
+<div align='center'>
 <table id='credits'>
 <tr align='center'>
     <td id='miro92'>
@@ -153,6 +161,9 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://twitter.com/bandarhl'>BandarHelal</a>
     </td>
+</tr>
+    
+<tr align='center'>
     <td id='galactic-dev'>
         <a href='https://github.com/Galactic-Dev'>
             <img src='https://github.com/Galactic-Dev.png' width='140px;'>
@@ -160,9 +171,6 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://twitter.com/dev_galactic'>galactic</a>
     </td>
-</tr>
-    
-<tr align='center'>
     <td id='julioverne'>
         <a href='https://github.com/julioverne'>
             <img src='https://github.com/julioverne.png' width='140px;'>
@@ -184,6 +192,9 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://github.com/Lyvendia'>Lyvendia</a>
     </td>
+</tr>
+  
+<tr align='center'>
     <td id='foxster'>
         <a href='https://github.com/therealFoxster'>
             <img src='https://github.com/therealFoxster.png' width='140px;'>
@@ -198,9 +209,6 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://twitter.com/ichitaso'>ichitaso</a>
     </td>
-</tr>
-  
-<tr align='center'>
     <td id='ahmed-bafkir'>
         <a href='https://github.com/AhmedBafkir'>
             <img src='https://github.com/AhmedBafkir.png' width='140px;'>
@@ -215,6 +223,9 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://twitter.com/cokepokes'>CokePokes</a>
     </td>
+</tr>
+
+<tr align='center'>
     <td id='isnackable'>
         <a href='https://github.com/ISnackable'>
             <img src='https://github.com/ISnackable.png' width='140px;'>
@@ -236,8 +247,16 @@ See [Installation - Wiki](https://github.com/qnblackcat/uYouPlus/wiki/Installati
         <br>
         <a href='https://https://twitter.com/t70438299'>qnblackcat</a>
     </td>
-</tr>
+    <td id='crossidev-studio'>
+        <a href='https://github.com/CrossiDev-Studio'>
+            <img src='https://github.com/CrossiDev-Studio.png' width='140px;'>
+        </a>
+        <br>
+        <a href='https://github.com/CrossiDev-Studio'>CrossiDev-Studio</a>
+    </td>
+</tr>            
 </table>
+</div>
 
 ## Support the developers!
 
